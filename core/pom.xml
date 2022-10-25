@@ -58,7 +58,7 @@
 
     <build>
 <!--        <finalName>analyzer-service</finalName>-->
-        <finalName>liga-medical-clinic-${project.version}</finalName>
+        <finalName>medical-monitoring-${project.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
