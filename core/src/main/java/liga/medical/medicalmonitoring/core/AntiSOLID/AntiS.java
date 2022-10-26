@@ -1,19 +1,23 @@
 package liga.medical.medicalmonitoring.core.AntiSOLID;
 
 public class AntiS {
-    public void methodForAntiS(){
+    public void methodForAntiS() {
         // некая логика для класса AntiS
     }
-    public void methodForAntiO(){
+
+    public void methodForAntiO() {
         // логика, которая должна была бы быть реализована в класса AntiO
     }
-    public void methodForAntiL(){
+
+    public void methodForAntiL() {
         // логика, которая должна была бы быть реализована в класса AntiL
     }
-    public void methodForAntiI(){
+
+    public void methodForAntiI() {
         // логика, которая должна была бы быть реализована в класса AntiI
     }
-    public void methodForAntiD(){
+
+    public void methodForAntiD() {
         // логика, которая должна была бы быть реализована в класса AntiD
     }
 }

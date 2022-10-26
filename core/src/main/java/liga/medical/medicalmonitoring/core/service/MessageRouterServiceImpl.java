@@ -33,6 +33,8 @@ public class MessageRouterServiceImpl implements MessageRouterService {
                 case ERROR:
                     messageSenderService.sendMessage(messageDto, QueueNames.ERROR_QUEUE_NAME);
                     break;
+                default:
+                    return;
             }
         } catch (Exception e) {
             messageSenderService.sendError(e.getMessage());

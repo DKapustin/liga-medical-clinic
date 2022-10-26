@@ -1,6 +1,6 @@
 package liga.medical.medicalmonitoring.core.AntiSOLID.AntiIPackage;
 
-public class Triangle implements AntiI{
+public class Triangle implements AntiI {
     @Override
     public void drawCircle() {
 
