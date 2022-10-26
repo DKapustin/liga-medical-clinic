@@ -12,35 +12,41 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitConfig {
-    private static final String HOST = "localhost";
     public static final String QUEUE = "common_monitoring";
+    private static final String HOST = "rabbit";
 
     @Bean
-    public ConnectionFactory connectionFactory(){
+    public ConnectionFactory connectionFactory() {
         return new CachingConnectionFactory(HOST);
     }
 
     @Bean
-    public AmqpAdmin amqpAdmin(){
+    public AmqpAdmin amqpAdmin() {
         return new RabbitAdmin(connectionFactory());
     }
 
     @Bean
-    public RabbitTemplate rabbitTemplate(){
+    public RabbitTemplate rabbitTemplate() {
         return new RabbitTemplate(connectionFactory());
     }
 
     @Bean
-    public Queue getQueue(){
+    public Queue getQueue() {
         return new Queue(QUEUE);
     }
 
     @Bean("dailyQueue")
-    public Queue getDailyQueue() { return new Queue(QueueNames.DAILY_QUEUE_NAME); }
+    public Queue getDailyQueue() {
+        return new Queue(QueueNames.DAILY_QUEUE_NAME);
+    }
 
     @Bean("alertQueue")
-    public Queue getAlertQueue() { return new Queue(QueueNames.ALERT_QUEUE_NAME); }
+    public Queue getAlertQueue() {
+        return new Queue(QueueNames.ALERT_QUEUE_NAME);
+    }
 
     @Bean("errorQueue")
-    public Queue getErrorQueue() { return new Queue(QueueNames.ERROR_QUEUE_NAME);}
+    public Queue getErrorQueue() {
+        return new Queue(QueueNames.ERROR_QUEUE_NAME);
+    }
 }
